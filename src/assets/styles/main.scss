@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../fonts/Raleway-Regular.ttf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../fonts/Raleway-Bold.ttf) format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 18px;
+  font-family: $font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: $black;
+}
+
+.page-title {
+  font-family: $font-secondary;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.styled-table {
+  border-collapse: separate;
+  border-radius: 26px;
+  border-spacing: 0px;
+
+  thead:first-child tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+  }
+  thead:first-child tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+  }
+  tbody:first-child tr:first-child td:first-child {
+    border-top-left-radius: 23px;
+  }
+  tbody:first-child tr:first-child td:last-child {
+    border-top-right-radius: 23px;
+  }
+  thead:last-child tr:last-child th:first-child,
+  tbody:last-child tr:last-child td:first-child {
+    border-bottom-left-radius: 23px;
+  }
+  thead:last-child tr:last-child th:first-child,
+  tbody:last-child tr:last-child td:last-child {
+    border-bottom-right-radius: 23px;
+  }
+
+  th, .th {
+    white-space: pre;
+    font-size: 0.8em;
+    line-height: 1.5;
+    padding: 10px 20px;
+  }
+
+  td, .td {
+    padding: 23px 20px;
+  }
+
+  &_green {
+    border: 3px solid $green;
+
+    tr, .tr {
+      td, .td {
+        background-color: $white;
+      }
+      &:nth-child(2n) {
+        td, .td {
+          background-color: $grey-light;
+        }
+      }
+    }
+
+    th, .th {
+      background-color: $green;
+      color: $white;
+
+      &:not(:first-child) {
+        border-left: 3px solid white;
+      }
+    }
+    td, .td {
+      border-top: 3px solid $green;
+
+      &:not(:first-child) {
+        border-left: 3px solid $green;
+      }
+    }
+  }
+
+  &_no-thead {
+    tbody tr:first-child td {
+      border-top-width: 0;
+    }
+  }
+}
+
+.styled-radio {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  transform: translateY(0.2em);
+  font: inherit;
+  color: currentColor;
+  width: 1.1em;
+  height: 1.1em;
+  border: 0.12em solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:checked {
+    border: 0.12em solid currentColor;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transition-property: width, height;
+    transition-duration: .2s, .2s;
+    box-shadow: inset 1em 1em currentColor;
+  }
+  &:checked::before {
+    width: 0.6em;
+    height: 0.6em;
+  }
+}
+
+.styled-radio_grey {
+  color: $grey;
+  border: 0.12em solid $grey;
+
+  &:checked {
+    border: 0.12em solid $grey-dark;
+  }
+
+  &:before {
+    box-shadow: inset 1em 1em $grey;
+  }
+  &:checked::before {
+    box-shadow: inset 1em 1em $grey-dark;
+  }
+}
+
+label .styled-radio,
+.styled-radio + label {
+  margin-right: .3em;
+}
+
+.styled-button {
+  display: flex;
+  border-radius: 26px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-weight: bold;
+
+  border: 2px solid $red;
+  background-color: $red;
+  color: $white;
+
+  transition: background-color, color ease-in-out, ease-in-out .2s, .2s;
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+
+    svg, path {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+
+  svg, path {
+    fill: $white;
+    stroke: $white;
+  }
+
+  cursor: pointer;
+
+  &__icon {
+    margin-right: 10px;
+
+    &_right {
+      margin-right: unset;
+      margin-left: 10px;
+    }
+  }
+}
+
+.styled-button_inactive {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  background-color: $white;
+  border: 2px solid $grey;
+  color: $grey;
+
+  svg, path {
+    fill: $grey;
+    stroke: $grey;
+  }
+}

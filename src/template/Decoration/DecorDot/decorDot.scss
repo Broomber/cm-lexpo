@@ -1,0 +1,48 @@
+.decoration {
+  pointer-events: none;
+
+  &__inner {
+    margin: -24px;
+  }
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__dot {
+    height: 12px;
+    flex: 0 0 12px;
+    max-width: 12px;
+    margin: 24px;
+    border-radius: 50%;
+
+    @media (max-width: 767px) {
+      height: 6px;
+      flex: 0 0 6px;
+      max-width: 6px;
+      margin: 12px;
+    }
+
+    &._brown {
+      background-color: $brown;
+    }
+    &._red {
+      background-color: $red;
+    }
+    &._orange {
+      background-color: $orange;
+    }
+    &._yellow {
+      background-color: $yellow;
+    }
+    &._green {
+      background-color: $green;
+    }
+    &._turquoise {
+      background-color: $turquoise;
+    }
+    &._blue {
+      background-color: $blue;
+    }
+  }
+}
+

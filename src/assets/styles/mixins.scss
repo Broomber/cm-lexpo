@@ -1,0 +1,94 @@
+@mixin container {
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  // @media (max-width: 991px) {
+  //   padding-right: 10px;
+  //   padding-left: 10px;
+  // }
+}
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+
+  // @media (max-width: 991px) {
+  //   margin-right: -10px;
+  //   margin-left: -10px;
+  // }
+}
+
+@mixin col {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  // @media (max-width: 991px) {
+  //   padding-right: 10px;
+  //   padding-left: 10px;
+  // }
+}
+
+@mixin col-12 {
+  flex: 0 0 12/12*100%;
+  max-width: 12/12*100%;
+}
+
+@mixin col-11 {
+  flex: 0 0 11/12*100%;
+  max-width: 11/12*100%;
+}
+
+@mixin col-10 {
+  flex: 0 0 10/12*100%;
+  max-width: 10/12*100%;
+}
+
+@mixin col-9 {
+  flex: 0 0 9/12*100%;
+  max-width: 9/12*100%;
+}
+
+@mixin col-8 {
+  flex: 0 0 8/12*100%;
+  max-width: 8/12*100%;
+}
+
+@mixin col-7 {
+  flex: 0 0 7/12*100%;
+  max-width: 7/12*100%;
+}
+
+@mixin col-6 {
+  flex: 0 0 6/12*100%;
+  max-width: 6/12*100%;
+}
+
+@mixin col-5 {
+  flex: 0 0 5/12*100%;
+  max-width: 5/12*100%;
+}
+
+@mixin col-4 {
+  flex: 0 0 4/12*100%;
+  max-width: 4/12*100%;
+}
+
+@mixin col-3 {
+  flex: 0 0 3/12*100%;
+  max-width: 3/12*100%;
+}
+
+@mixin col-2 {
+  flex: 0 0 2/12*100%;
+  max-width: 2/12*100%;
+}
+
+@mixin col-1 {
+  flex: 0 0 1/12*100%;
+  max-width: 1/12*100%;
+}

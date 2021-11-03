@@ -1,0 +1,174 @@
+.career-quiz {
+  &__inner {
+    @include row;
+  }
+
+  &__aside {
+    @include col;
+    max-width: 28%;
+    flex: 0 0 28%;
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  &__table-wrapper {
+    width: 100%;
+    overflow: auto;
+  }
+
+  &__table {
+    @include col;
+    max-width: 72%;
+    flex: 0 0 72%;
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+.career-quiz-table {
+  @extend .styled-table_green;
+  width: 100%;
+  text-align: center;
+
+  .fixed-cell {
+    max-width: 90px;
+    min-width: 90px;
+    padding: 10px 2px;
+  }
+
+  .career-quiz-radio-cell {
+    padding: 0;
+
+    .styled-radio {
+      @extend .styled-radio_grey;
+      font-size: 1.5em;
+      color: $grey;
+    }
+  }
+
+  &_mobile {
+    @extend .styled-table_no-thead;
+    display: none;
+
+    .quiz-answer-text {
+      @extend .text-left;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+      display: table;
+    }
+  }
+
+  &_pc {
+    display: table;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.career-quiz-aside {
+  width: 100%;
+  position: relative;
+
+  &__message {
+    position: relative;
+    padding: 20px;
+    padding-bottom: 110px;
+    background-color: $blue;
+    border-radius: 26px;
+    color: $white;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5;
+    z-index: 2;
+
+    @media (max-width: 991px) {
+      font-size: 1.75em;
+      padding-bottom: 90px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -34px;
+      left: 140px;
+      display: block;
+      height: 35px;
+      width: 41px;
+      background-image: url('../assets/images/dialog-baloon-tail.svg');
+      z-index: 1;
+    }
+  }
+
+  &__mascot {
+    // content: '';
+    position: relative;
+    // bottom: -80px;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    display: block;
+    height: 150px;
+    width: 130px;
+    background-image: url('../assets/images/mascot.png');
+    z-index: 11;
+  }
+
+  &__decoration {
+    // position: absolute;
+    // bottom: -90px;
+    // left: -40px;
+    margin-top: -265px;
+    margin-left: -40px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+
+.career-quiz-table-pagination {
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__text-item {
+    font-size: 1.3em;
+    line-height: 1.2;
+    font-weight: bold;
+    color: $green;
+
+    @media (max-width: 767px) {
+      font-size: 1.2em;
+    }
+  }
+
+  &__nav {
+    margin-top: 30px;
+
+    &-inner {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .styled-button:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+

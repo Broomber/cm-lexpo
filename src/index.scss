@@ -1,0 +1,13 @@
+@import './assets/styles/variables.scss';
+@import './assets/styles/mixins.scss';
+@import './assets/styles/main.scss';
+@import './assets/styles/helpers.scss';
+
+@import './template/Header/header.scss';
+@import './template/Nav/nav.scss';
+@import './template/Footer/footer.scss';
+@import './template/Decoration/DecorDot/decorDot.scss';
+
+@import './app/app.scss';
+
+@import './features/Steps/steps.scss';

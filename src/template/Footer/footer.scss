@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 29px;
+  background-color: $green;
+
+  &__decoration {
+    position: relative;
+    padding-top: 50px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -71px;
+      height: 100px;
+      width: 100%;
+      background-position: bottom center;
+      background-repeat: repeat-x;
+      background-image: url('../../assets/images/hills-bg.png');
+      z-index: -10;
+    }
+  }
+}
